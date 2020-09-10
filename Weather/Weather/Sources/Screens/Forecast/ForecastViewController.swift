@@ -12,7 +12,7 @@ class ForecastViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    private(set) lazy var forecastView = ForecastView() |> UIView.backgroundColor(color: .white)
+    private(set) lazy var forecastView = ForecastView()
 
     // MARK: - Lifecycle
 
@@ -30,6 +30,7 @@ class ForecastViewController: UIViewController {
 
     private let city: City
     private let forecastService: ForecastServiceProtocol
+    private let temperatureColorAdapter = TemperatureColorAdapter()
     private let disposeBag = DisposeBag()
 
     private func setUpSelf() {
@@ -38,8 +39,17 @@ class ForecastViewController: UIViewController {
 
     private func loadForecast() {
         forecastService.getForecast(id: city.id)
-            .subscribe(onSuccess: { forecast in print(forecast.name) })
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { [unowned self] forecast in self.setUpData(forecast: forecast) })
             .disposed(by: disposeBag)
+    }
+
+    private func setUpData(forecast: Forecast) {
+        forecastView.nameLabel.text = city.name
+        forecastView.windLabel.text = "Prędkość wiatru: \(forecast.wind.speed) km/h"
+        forecastView.temperatureLabel.text = "\(Int(forecast.temperature.currentTemperature))"
+        let currentTemperature = forecast.temperature.currentTemperature
+        forecastView.temperatureLabel.textColor = temperatureColorAdapter.getColor(for: currentTemperature)
     }
 
     // MARK: - Required initializer
