@@ -41,7 +41,8 @@ class ApiClient {
 
     private func queryItems<E: ApiRequest>(from endpoint: E) -> [URLQueryItem]? {
         let apiKeyQuery = URLQueryItem(name: StaticParameter.apiKey, value: "45969d9700a32f98624a7b2ebe8499fc")
-        let requestParameters = [apiKeyQuery]
+        let unitsQuery = URLQueryItem(name: StaticParameter.units, value: "metric")
+        let requestParameters = [apiKeyQuery, unitsQuery]
 
         var endpointParameters = endpoint.urlParameters?.compactMap { key, value in
             URLQueryItem(name: key, value: value)
