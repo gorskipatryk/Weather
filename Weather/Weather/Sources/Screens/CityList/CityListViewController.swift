@@ -63,10 +63,7 @@ class CityListViewController: UIViewController {
     private func setUpTableSelection() {
         cityListView.tableView.rx
             .modelSelected(City.self)
-            .subscribe(onNext: { [unowned self] city in
-                let controller = ForecastViewController(city: city)
-                self.navigationController?.pushViewController(controller, animated: true)
-            })
+            .subscribe()
             .disposed(by: disposeBag)
     }
 

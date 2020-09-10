@@ -20,6 +20,9 @@ class ApplicationAssembly: Assembly {
             SearchViewController(debouncingScheduler: MainScheduler.instance)
         }
         container.autoregister(CityListViewController.self, initializer: CityListViewController.init)
+        container.autoregister(ForecastViewController.self,
+                               argument: City.self,
+                               initializer: ForecastViewController.init)
     }
 
     func assembleProviders(container: Container) {
@@ -32,5 +35,6 @@ class ApplicationAssembly: Assembly {
         container.register(ApiClient.self) { _ in
             ApiClient(urlSession: URLSession.shared)
         }
+        container.autoregister(ForecastServiceProtocol.self, initializer: ForecastService.init)
     }
 }
