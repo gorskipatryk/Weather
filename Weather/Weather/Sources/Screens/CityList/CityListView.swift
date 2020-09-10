@@ -18,6 +18,7 @@ class CityListView: UIView {
     // MARK: - Layout
 
     private func setUpLayout() {
+        backgroundColor = .white
         addSubview(searchView)
         addSubview(tableView)
 

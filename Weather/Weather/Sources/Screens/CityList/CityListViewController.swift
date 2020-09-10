@@ -26,6 +26,7 @@ class CityListViewController: UIViewController {
         embedChildren()
         setUpSelf()
         setUpTableView()
+        setUpTableSelection()
     }
 
     // MARK: - Private
@@ -41,6 +42,8 @@ class CityListViewController: UIViewController {
 
     private func setUpSelf() {
         title = "Wyszukaj miasto"
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
     }
 
     private func setUpTableView() {
@@ -55,6 +58,16 @@ class CityListViewController: UIViewController {
             cell.subtitleLabel.text = model.country
         }
         .disposed(by: disposeBag)
+    }
+
+    private func setUpTableSelection() {
+        cityListView.tableView.rx
+            .modelSelected(City.self)
+            .subscribe(onNext: { [unowned self] city in
+                let controller = ForecastViewController(city: city)
+                self.navigationController?.pushViewController(controller, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 
     // MARK: - Required initializer

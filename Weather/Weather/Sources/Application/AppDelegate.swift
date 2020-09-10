@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let cityListController = assembler.resolver ~> CityListViewController.self
-        let controller = UINavigationController(rootViewController: cityListController)
+        let controller = UINavigationController(rootViewController: cityListController) |> UINavigationController.default
         controller.navigationBar.isTranslucent = false
         window = windowFactory.makeWindow(rootViewController: controller)
         return true
