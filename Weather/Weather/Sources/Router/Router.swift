@@ -24,9 +24,8 @@ class Router {
     private func cityListViewController() -> CityListViewController {
         let controller = viewControllerFactory.makeCityListViewController()
         controller.output
-            .subscribe(onNext: { [unowned self] output in
-                self.handleCityListControllerOutput(output: output)
-            }).disposed(by: controller.disposeBag)
+            .subscribe(onNext: { [unowned self] output in self.handleCityListControllerOutput(output: output) })
+            .disposed(by: controller.disposeBag)
         return controller
     }
 

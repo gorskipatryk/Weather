@@ -2,8 +2,6 @@ import UIKit
 
 class TemperatureColorAdapter {
 
-    init() {}
-
     func getColor(for temperature: Double) -> UIColor {
         switch temperature {
         case ...10:

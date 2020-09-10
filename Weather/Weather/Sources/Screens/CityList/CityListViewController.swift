@@ -41,8 +41,8 @@ class CityListViewController: UIViewController, ControllerOutputProducer {
 
     private let childrenFactory: CityListChildrenFactoryProtocol
     private let cityListProvider: CityListProviding
-    private lazy var searchController = childrenFactory.makeSearchViewController()
     private let outputRelay = PublishRelay<ControllerOutput>()
+    private lazy var searchController = childrenFactory.makeSearchViewController()
 
     private func embedChildren() {
         embed(searchController, inside: cityListView.searchView)
@@ -50,15 +50,12 @@ class CityListViewController: UIViewController, ControllerOutputProducer {
 
     private func setUpSelf() {
         title = "Wyszukaj miasto"
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButton
+        navigationItem.backBarButtonItem = UIBarButtonItem.backButton
     }
 
     private func setUpTableView() {
         let data = Observable.combineLatest(Observable.just(cityListProvider.cities), searchController.cityName)
-            .map { cities, query in
-                cities.filter { $0.name.lowercased().starts(with: query) }
-            }
+            .map { cities, query in cities.filter { $0.name.lowercased().starts(with: query) } }
 
         data.bind(to: cityListView.tableView.rx.items(cellIdentifier: "CityListCell")) { _, model, cell in
             guard let cell = cell as? CityListCell else { return }

@@ -37,6 +37,7 @@
 		D022957B250AD36F00ACB413 /* CityListViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022957A250AD36F00ACB413 /* CityListViewControllerOutput.swift */; };
 		D022957E250AD9F400ACB413 /* TemperatureColorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022957D250AD9F400ACB413 /* TemperatureColorAdapter.swift */; };
 		D0229582250ADC7500ACB413 /* TemperatureColorAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229580250ADC3B00ACB413 /* TemperatureColorAdapterSpec.swift */; };
+		D0229584250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229583250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift */; };
 		D07E559B250AB8B900971F1E /* UINavigationController+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */; };
 		D07E559F250ABD1400971F1E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559E250ABD1400971F1E /* ApiClient.swift */; };
 		D07E55A3250ABD6800971F1E /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55A2250ABD6800971F1E /* NetworkClientError.swift */; };
@@ -148,6 +149,7 @@
 		D022957A250AD36F00ACB413 /* CityListViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewControllerOutput.swift; sourceTree = "<group>"; };
 		D022957D250AD9F400ACB413 /* TemperatureColorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColorAdapter.swift; sourceTree = "<group>"; };
 		D0229580250ADC3B00ACB413 /* TemperatureColorAdapterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColorAdapterSpec.swift; sourceTree = "<group>"; };
+		D0229583250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+BackButton.swift"; sourceTree = "<group>"; };
 		D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Styles.swift"; sourceTree = "<group>"; };
 		D07E559E250ABD1400971F1E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D07E55A2250ABD6800971F1E /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				D08B1B13250A5A0000719011 /* UIViewController+Embedding.swift */,
+				D0229583250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				D00F15F22509181800F7F33F /* AppDelegate.swift in Sources */,
 				D07E55A5250ABDE700971F1E /* StaticParameter.swift in Sources */,
 				D08B1B14250A5A0000719011 /* UIViewController+Embedding.swift in Sources */,
+				D0229584250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift in Sources */,
 				D07E55B9250AC8A600971F1E /* ForecastService.swift in Sources */,
 				D07E559B250AB8B900971F1E /* UINavigationController+Styles.swift in Sources */,
 			);

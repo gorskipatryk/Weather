@@ -17,7 +17,6 @@ class ApiClient {
                 return self.urlSession.rx.data(request: request)
             }
             .map { response in return try request.parse(response) }
-            .do(onError: { error in print("Network error: \(error)") })
     }
 
     // MARK: - Private

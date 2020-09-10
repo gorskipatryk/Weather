@@ -2,10 +2,6 @@ import Validated
 
 class ValidationPresenter {
 
-    // MARK: - Initialization
-
-    init() {}
-
     // MARK: - Validation
 
     func presentValidationResult(validation: Validated<String, String>, in view: InputView) {
