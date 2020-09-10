@@ -1,10 +1,12 @@
+import RxSwift
 import UIKit
 
 class CityListViewController: UIViewController {
 
     // MARK: - Initialization
 
-    init() {
+    init(childrenFactory: CityListChildrenFactoryProtocol) {
+        self.childrenFactory = childrenFactory
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -18,10 +20,14 @@ class CityListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        embed(searchController, inside: cityListView.searchView)
         setUpSelf()
     }
 
     // MARK: - Private
+
+    private let childrenFactory: CityListChildrenFactoryProtocol
+    private lazy var searchController = childrenFactory.makeSearchViewController()
 
     private func setUpSelf() {
         title = "Wyszukaj miasto"

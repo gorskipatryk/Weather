@@ -13,7 +13,7 @@ class CityListView: UIView {
     // MARK: - Subviews
 
     let tableView = UITableView() |> UITableView.citiesTableView
-    let searchView = SearchView() |> UIView.backgroundColor(color: .white)
+    let searchView = UIView() |> UIView.backgroundColor(color: .white)
 
     // MARK: - Layout
 

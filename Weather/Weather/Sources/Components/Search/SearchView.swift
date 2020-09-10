@@ -1,7 +1,7 @@
 import Anchorage
 import UIKit
 
-class SearchView: UIView {
+class SearchView: UIView, InputView {
 
     // MARK: - Initialization
 
@@ -9,6 +9,8 @@ class SearchView: UIView {
         super.init(frame: .zero)
         setUpLayout()
     }
+
+    var input: Input { searchInput }
 
     // MARK: - Subviews
 

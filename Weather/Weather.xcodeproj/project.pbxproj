@@ -42,6 +42,16 @@
 		D08B1B05250A4F9200719011 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B04250A4F9200719011 /* SearchView.swift */; };
 		D08B1B07250A51A700719011 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B06250A51A700719011 /* UIView+Styles.swift */; };
 		D08B1B09250A537100719011 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B08250A537100719011 /* UILabel+Styles.swift */; };
+		D08B1B0D250A57B800719011 /* CityListProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B0C250A57B800719011 /* CityListProviding.swift */; };
+		D08B1B0F250A57C100719011 /* CityListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B0E250A57C100719011 /* CityListProvider.swift */; };
+		D08B1B11250A592500719011 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B10250A592500719011 /* SearchViewController.swift */; };
+		D08B1B14250A5A0000719011 /* UIViewController+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B13250A5A0000719011 /* UIViewController+Embedding.swift */; };
+		D08B1B17250A5C1200719011 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B16250A5C1200719011 /* InputView.swift */; };
+		D08B1B19250A5C3200719011 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B18250A5C3200719011 /* Input.swift */; };
+		D08B1B1C250A5CEB00719011 /* CityNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B1B250A5CEB00719011 /* CityNameValidator.swift */; };
+		D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B1E250A62E300719011 /* ValidationPresenter.swift */; };
+		D08B1B22250A6A8500719011 /* CityListChildrenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B21250A6A8500719011 /* CityListChildrenFactory.swift */; };
+		D08B1B24250A77EA00719011 /* CityListChildrenFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +122,16 @@
 		D08B1B04250A4F9200719011 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D08B1B06250A51A700719011 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
 		D08B1B08250A537100719011 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
+		D08B1B0C250A57B800719011 /* CityListProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListProviding.swift; sourceTree = "<group>"; };
+		D08B1B0E250A57C100719011 /* CityListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListProvider.swift; sourceTree = "<group>"; };
+		D08B1B10250A592500719011 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D08B1B13250A5A0000719011 /* UIViewController+Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedding.swift"; sourceTree = "<group>"; };
+		D08B1B16250A5C1200719011 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		D08B1B18250A5C3200719011 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		D08B1B1B250A5CEB00719011 /* CityNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameValidator.swift; sourceTree = "<group>"; };
+		D08B1B1E250A62E300719011 /* ValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPresenter.swift; sourceTree = "<group>"; };
+		D08B1B21250A6A8500719011 /* CityListChildrenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListChildrenFactory.swift; sourceTree = "<group>"; };
+		D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListChildrenFactoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +197,11 @@
 		D00F161325091CA800F7F33F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D08B1B1D250A62D600719011 /* Presenters */,
+				D08B1B1A250A5CCD00719011 /* Validators */,
+				D08B1B15250A5C0900719011 /* Protocols */,
+				D08B1B12250A59F100719011 /* Extensions */,
+				D08B1B0A250A57A500719011 /* Providers */,
 				D08B1B02250A4F8400719011 /* Components */,
 				D08B1AFB250A4AB200719011 /* Helpers */,
 				D00F16672509502900F7F33F /* Assemblies */,
@@ -287,6 +312,7 @@
 		D00F16662509501400F7F33F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				D08B1B20250A6A7600719011 /* CityListChildren */,
 				D00F1668250989C100F7F33F /* Window */,
 			);
 			path = Factories;
@@ -347,17 +373,77 @@
 		D08B1B02250A4F8400719011 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D08B1B03250A4F8900719011 /* SearchView */,
+				D08B1B03250A4F8900719011 /* Search */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		D08B1B03250A4F8900719011 /* SearchView */ = {
+		D08B1B03250A4F8900719011 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				D08B1B04250A4F9200719011 /* SearchView.swift */,
+				D08B1B10250A592500719011 /* SearchViewController.swift */,
 			);
-			path = SearchView;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D08B1B0A250A57A500719011 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B0B250A57AE00719011 /* CityList */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		D08B1B0B250A57AE00719011 /* CityList */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B0C250A57B800719011 /* CityListProviding.swift */,
+				D08B1B0E250A57C100719011 /* CityListProvider.swift */,
+			);
+			path = CityList;
+			sourceTree = "<group>";
+		};
+		D08B1B12250A59F100719011 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B13250A5A0000719011 /* UIViewController+Embedding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D08B1B15250A5C0900719011 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B16250A5C1200719011 /* InputView.swift */,
+				D08B1B18250A5C3200719011 /* Input.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D08B1B1A250A5CCD00719011 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B1B250A5CEB00719011 /* CityNameValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		D08B1B1D250A62D600719011 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B1E250A62E300719011 /* ValidationPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		D08B1B20250A6A7600719011 /* CityListChildren */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B21250A6A8500719011 /* CityListChildrenFactory.swift */,
+				D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */,
+			);
+			path = CityListChildren;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,16 +609,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08B1B09250A537100719011 /* UILabel+Styles.swift in Sources */,
+				D08B1B0D250A57B800719011 /* CityListProviding.swift in Sources */,
+				D08B1B0F250A57C100719011 /* CityListProvider.swift in Sources */,
+				D08B1B11250A592500719011 /* SearchViewController.swift in Sources */,
+				D08B1B1C250A5CEB00719011 /* CityNameValidator.swift in Sources */,
 				D00F15F62509181800F7F33F /* CityListViewController.swift in Sources */,
+				D08B1B17250A5C1200719011 /* InputView.swift in Sources */,
 				D08B1B05250A4F9200719011 /* SearchView.swift in Sources */,
+				D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */,
 				D08B1B07250A51A700719011 /* UIView+Styles.swift in Sources */,
 				D08B1AF825098F4300719011 /* ApplicationAssembly.swift in Sources */,
 				D08B1AFE250A4AC200719011 /* Operators.swift in Sources */,
 				D08B1B01250A4DBF00719011 /* UITableView+Styles.swift in Sources */,
 				D08B1AF425098E2300719011 /* WindowFactoring.swift in Sources */,
+				D08B1B22250A6A8500719011 /* CityListChildrenFactory.swift in Sources */,
+				D08B1B24250A77EA00719011 /* CityListChildrenFactoryProtocol.swift in Sources */,
 				D08B1AFA250A4AAA00719011 /* CityListView.swift in Sources */,
 				D08B1AF525098E2600719011 /* WindowFactory.swift in Sources */,
+				D08B1B19250A5C3200719011 /* Input.swift in Sources */,
 				D00F15F22509181800F7F33F /* AppDelegate.swift in Sources */,
+				D08B1B14250A5A0000719011 /* UIViewController+Embedding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
