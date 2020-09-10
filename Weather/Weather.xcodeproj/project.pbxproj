@@ -38,6 +38,11 @@
 		D022957E250AD9F400ACB413 /* TemperatureColorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022957D250AD9F400ACB413 /* TemperatureColorAdapter.swift */; };
 		D0229582250ADC7500ACB413 /* TemperatureColorAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229580250ADC3B00ACB413 /* TemperatureColorAdapterSpec.swift */; };
 		D0229584250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229583250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift */; };
+		D0229588250AE12400ACB413 /* CityNameValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229586250AE11300ACB413 /* CityNameValidatorSpec.swift */; };
+		D022958C250AE34700ACB413 /* CityListChildrenFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022958A250AE34200ACB413 /* CityListChildrenFactoryStub.swift */; };
+		D022958F250AE3FD00ACB413 /* CityListProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022958D250AE3F800ACB413 /* CityListProviderStub.swift */; };
+		D0229591250AE84300ACB413 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229590250AE84300ACB413 /* main.swift */; };
+		D0229595250AE92B00ACB413 /* UINavigationController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229593250AE8F400ACB413 /* UINavigationController+SnapshotFixture.swift */; };
 		D07E559B250AB8B900971F1E /* UINavigationController+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */; };
 		D07E559F250ABD1400971F1E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559E250ABD1400971F1E /* ApiClient.swift */; };
 		D07E55A3250ABD6800971F1E /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55A2250ABD6800971F1E /* NetworkClientError.swift */; };
@@ -150,6 +155,11 @@
 		D022957D250AD9F400ACB413 /* TemperatureColorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColorAdapter.swift; sourceTree = "<group>"; };
 		D0229580250ADC3B00ACB413 /* TemperatureColorAdapterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColorAdapterSpec.swift; sourceTree = "<group>"; };
 		D0229583250ADF4600ACB413 /* UIBarButtonItem+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+BackButton.swift"; sourceTree = "<group>"; };
+		D0229586250AE11300ACB413 /* CityNameValidatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameValidatorSpec.swift; sourceTree = "<group>"; };
+		D022958A250AE34200ACB413 /* CityListChildrenFactoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListChildrenFactoryStub.swift; sourceTree = "<group>"; };
+		D022958D250AE3F800ACB413 /* CityListProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListProviderStub.swift; sourceTree = "<group>"; };
+		D0229590250AE84300ACB413 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D0229593250AE8F400ACB413 /* UINavigationController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SnapshotFixture.swift"; sourceTree = "<group>"; };
 		D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Styles.swift"; sourceTree = "<group>"; };
 		D07E559E250ABD1400971F1E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D07E55A2250ABD6800971F1E /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
@@ -294,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D00F15F12509181800F7F33F /* AppDelegate.swift */,
+				D0229590250AE84300ACB413 /* main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -320,6 +331,9 @@
 		D00F161825091D9D00F7F33F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D0229592250AE8E600ACB413 /* Fixtures */,
+				D0229589250AE32800ACB413 /* Stubs */,
+				D0229585250AE10300ACB413 /* Validators */,
 				D022957F250ADC2F00ACB413 /* Adapters */,
 				D08B1AF025098B1100719011 /* Factories */,
 				D00F161A25091DCF00F7F33F /* Screens */,
@@ -421,6 +435,31 @@
 				D0229580250ADC3B00ACB413 /* TemperatureColorAdapterSpec.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		D0229585250AE10300ACB413 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				D0229586250AE11300ACB413 /* CityNameValidatorSpec.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		D0229589250AE32800ACB413 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				D022958A250AE34200ACB413 /* CityListChildrenFactoryStub.swift */,
+				D022958D250AE3F800ACB413 /* CityListProviderStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		D0229592250AE8E600ACB413 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				D0229593250AE8F400ACB413 /* UINavigationController+SnapshotFixture.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		D07E559C250ABCB800971F1E /* Networking */ = {
@@ -835,6 +874,7 @@
 				D07E55B1250AC29E00971F1E /* Forecast.swift in Sources */,
 				D07E55AF250AC0CC00971F1E /* GeneralError.swift in Sources */,
 				D08B1B05250A4F9200719011 /* SearchView.swift in Sources */,
+				D0229591250AE84300ACB413 /* main.swift in Sources */,
 				D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */,
 				D08B1B07250A51A700719011 /* UIView+Styles.swift in Sources */,
 				D0229579250AD2E500ACB413 /* ControllerOutput.swift in Sources */,
@@ -876,6 +916,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00F16092509181A00F7F33F /* CityListViewControllerSpec.swift in Sources */,
+				D022958C250AE34700ACB413 /* CityListChildrenFactoryStub.swift in Sources */,
+				D0229588250AE12400ACB413 /* CityNameValidatorSpec.swift in Sources */,
+				D0229595250AE92B00ACB413 /* UINavigationController+SnapshotFixture.swift in Sources */,
+				D022958F250AE3FD00ACB413 /* CityListProviderStub.swift in Sources */,
 				D08B1AF625098E2800719011 /* WindowFactorySpec.swift in Sources */,
 				D0229582250ADC7500ACB413 /* TemperatureColorAdapterSpec.swift in Sources */,
 			);
