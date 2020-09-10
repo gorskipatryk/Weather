@@ -27,4 +27,10 @@ class ApplicationAssembly: Assembly {
             CityListProvider(fileManager: FileManager.default, jsonDecoder: JSONDecoder())
         }
     }
+
+    func assembleServices(container: Container) {
+        container.register(ApiClient.self) { _ in
+            ApiClient(urlSession: URLSession.shared)
+        }
+    }
 }

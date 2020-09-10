@@ -12,7 +12,7 @@ class ForecastView: UIView {
 
     // MARK: - Subviews
 
-    let stackView = UIStackView() |> UIStackView.vertical(spacing:24)
+    let stackView = UIStackView() |> UIStackView.vertical(spacing: 24)
 
     // MARK: - Private
 
