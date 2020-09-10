@@ -8,17 +8,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var assembler = Assembler([ApplicationAssembly()])
     var windowFactory: WindowFactoring
+    var router: Router
 
     override init() {
         windowFactory = assembler.resolver ~> WindowFactoring.self
+        router = assembler.resolver ~> Router.self
     }
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let cityListController = assembler.resolver ~> CityListViewController.self
-        let controller = UINavigationController(rootViewController: cityListController) |> UINavigationController.default
-        controller.navigationBar.isTranslucent = false
-        window = windowFactory.makeWindow(rootViewController: controller)
+        window = windowFactory.makeWindow(rootViewController: router.navigationController)
+        router.start()
         return true
     }
 }

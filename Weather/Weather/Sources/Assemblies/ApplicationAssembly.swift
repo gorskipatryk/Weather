@@ -8,11 +8,15 @@ class ApplicationAssembly: Assembly {
         assembleFactories(container: container)
         assembleControllers(container: container)
         assembleProviders(container: container)
+        assembleServices(container: container)
+        assembleRouting(container: container)
     }
 
     func assembleFactories(container: Container) {
         container.autoregister(WindowFactoring.self, initializer: WindowFactory.init)
         container.register(CityListChildrenFactoryProtocol.self) { CityListChildrenFactory(resolver: $0) }
+        container.register(ViewControllerFactoryProtocol.self) { ViewControllerFactory(resolver: $0) }
+        container.autoregister(NavigationControllerFactoryProtocol.self, initializer: NavigationControllerFactory.init)
     }
 
     func assembleControllers(container: Container) {
@@ -36,5 +40,9 @@ class ApplicationAssembly: Assembly {
             ApiClient(urlSession: URLSession.shared)
         }
         container.autoregister(ForecastServiceProtocol.self, initializer: ForecastService.init)
+    }
+
+    func assembleRouting(container: Container) {
+        container.autoregister(Router.self, initializer: Router.init)
     }
 }

@@ -32,6 +32,9 @@
 		D00F1662250949B500F7F33F /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D00F165E250949B500F7F33F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D00F166425094A2B00F7F33F /* RxBlocking.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D00F166325094A2B00F7F33F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D00F166525094A2F00F7F33F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00F166325094A2B00F7F33F /* RxBlocking.framework */; };
+		D0229577250AD2A600ACB413 /* ControllerOutputProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229576250AD2A600ACB413 /* ControllerOutputProducer.swift */; };
+		D0229579250AD2E500ACB413 /* ControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0229578250AD2E500ACB413 /* ControllerOutput.swift */; };
+		D022957B250AD36F00ACB413 /* CityListViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D022957A250AD36F00ACB413 /* CityListViewControllerOutput.swift */; };
 		D07E559B250AB8B900971F1E /* UINavigationController+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */; };
 		D07E559F250ABD1400971F1E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E559E250ABD1400971F1E /* ApiClient.swift */; };
 		D07E55A3250ABD6800971F1E /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55A2250ABD6800971F1E /* NetworkClientError.swift */; };
@@ -44,6 +47,11 @@
 		D07E55B5250AC35E00971F1E /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55B4250AC35E00971F1E /* Wind.swift */; };
 		D07E55B9250AC8A600971F1E /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55B8250AC8A600971F1E /* ForecastService.swift */; };
 		D07E55BB250AC94100971F1E /* ForecastServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55BA250AC94100971F1E /* ForecastServiceProtocol.swift */; };
+		D07E55BE250ACB4D00971F1E /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55BD250ACB4D00971F1E /* ViewControllerFactory.swift */; };
+		D07E55C0250ACB6B00971F1E /* ViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55BF250ACB6B00971F1E /* ViewControllerFactoryProtocol.swift */; };
+		D07E55C3250ACC4F00971F1E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55C2250ACC4F00971F1E /* Router.swift */; };
+		D07E55C6250ACCA600971F1E /* NavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55C5250ACCA600971F1E /* NavigationControllerFactory.swift */; };
+		D07E55C8250ACCB000971F1E /* NavigationControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E55C7250ACCB000971F1E /* NavigationControllerFactoryProtocol.swift */; };
 		D08B1AF425098E2300719011 /* WindowFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F1669250989CB00F7F33F /* WindowFactoring.swift */; };
 		D08B1AF525098E2600719011 /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F166B250989D300F7F33F /* WindowFactory.swift */; };
 		D08B1AF625098E2800719011 /* WindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1AF125098B4500719011 /* WindowFactorySpec.swift */; };
@@ -133,6 +141,9 @@
 		D00F166325094A2B00F7F33F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		D00F1669250989CB00F7F33F /* WindowFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFactoring.swift; sourceTree = "<group>"; };
 		D00F166B250989D300F7F33F /* WindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
+		D0229576250AD2A600ACB413 /* ControllerOutputProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerOutputProducer.swift; sourceTree = "<group>"; };
+		D0229578250AD2E500ACB413 /* ControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerOutput.swift; sourceTree = "<group>"; };
+		D022957A250AD36F00ACB413 /* CityListViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewControllerOutput.swift; sourceTree = "<group>"; };
 		D07E559A250AB8B900971F1E /* UINavigationController+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Styles.swift"; sourceTree = "<group>"; };
 		D07E559E250ABD1400971F1E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D07E55A2250ABD6800971F1E /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
@@ -145,6 +156,11 @@
 		D07E55B4250AC35E00971F1E /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		D07E55B8250AC8A600971F1E /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		D07E55BA250AC94100971F1E /* ForecastServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceProtocol.swift; sourceTree = "<group>"; };
+		D07E55BD250ACB4D00971F1E /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		D07E55BF250ACB6B00971F1E /* ViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
+		D07E55C2250ACC4F00971F1E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D07E55C5250ACCA600971F1E /* NavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactory.swift; sourceTree = "<group>"; };
+		D07E55C7250ACCB000971F1E /* NavigationControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		D08B1AF125098B4500719011 /* WindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFactorySpec.swift; sourceTree = "<group>"; };
 		D08B1AF725098F4300719011 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		D08B1AF9250A4AAA00719011 /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
@@ -235,6 +251,7 @@
 		D00F161325091CA800F7F33F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D07E55C1250ACC4800971F1E /* Router */,
 				D07E55B6250AC89700971F1E /* Services */,
 				D07E55AD250AC0C400971F1E /* Errors */,
 				D07E559C250ABCB800971F1E /* Networking */,
@@ -288,6 +305,7 @@
 			children = (
 				D00F15F52509181800F7F33F /* CityListViewController.swift */,
 				D08B1AF9250A4AAA00719011 /* CityListView.swift */,
+				D022957A250AD36F00ACB413 /* CityListViewControllerOutput.swift */,
 			);
 			path = CityList;
 			sourceTree = "<group>";
@@ -356,6 +374,8 @@
 		D00F16662509501400F7F33F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				D07E55C4250ACC9900971F1E /* NavigationController */,
+				D07E55BC250ACB4200971F1E /* ViewController */,
 				D08B1B20250A6A7600719011 /* CityListChildren */,
 				D00F1668250989C100F7F33F /* Window */,
 			);
@@ -438,6 +458,32 @@
 				D07E55BA250AC94100971F1E /* ForecastServiceProtocol.swift */,
 			);
 			path = Forecast;
+			sourceTree = "<group>";
+		};
+		D07E55BC250ACB4200971F1E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D07E55BD250ACB4D00971F1E /* ViewControllerFactory.swift */,
+				D07E55BF250ACB6B00971F1E /* ViewControllerFactoryProtocol.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D07E55C1250ACC4800971F1E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D07E55C2250ACC4F00971F1E /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D07E55C4250ACC9900971F1E /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				D07E55C5250ACCA600971F1E /* NavigationControllerFactory.swift */,
+				D07E55C7250ACCB000971F1E /* NavigationControllerFactoryProtocol.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		D08B1AF025098B1100719011 /* Factories */ = {
@@ -526,6 +572,8 @@
 				D08B1B16250A5C1200719011 /* InputView.swift */,
 				D08B1B18250A5C3200719011 /* Input.swift */,
 				D0AAEFA2250AA4BF00FB74EB /* FileManaging.swift */,
+				D0229576250AD2A600ACB413 /* ControllerOutputProducer.swift */,
+				D0229578250AD2E500ACB413 /* ControllerOutput.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -747,6 +795,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08B1B09250A537100719011 /* UILabel+Styles.swift in Sources */,
+				D07E55C0250ACB6B00971F1E /* ViewControllerFactoryProtocol.swift in Sources */,
 				D08B1B0D250A57B800719011 /* CityListProviding.swift in Sources */,
 				D07E55B3250AC35800971F1E /* Temperature.swift in Sources */,
 				D08B1B0F250A57C100719011 /* CityListProvider.swift in Sources */,
@@ -754,22 +803,28 @@
 				D08B1B1C250A5CEB00719011 /* CityNameValidator.swift in Sources */,
 				D0AAEFA3250AA4BF00FB74EB /* FileManaging.swift in Sources */,
 				D00F15F62509181800F7F33F /* CityListViewController.swift in Sources */,
+				D0229577250AD2A600ACB413 /* ControllerOutputProducer.swift in Sources */,
 				D07E559F250ABD1400971F1E /* ApiClient.swift in Sources */,
+				D07E55C3250ACC4F00971F1E /* Router.swift in Sources */,
 				D08B1B17250A5C1200719011 /* InputView.swift in Sources */,
 				D07E55B1250AC29E00971F1E /* Forecast.swift in Sources */,
 				D07E55AF250AC0CC00971F1E /* GeneralError.swift in Sources */,
 				D08B1B05250A4F9200719011 /* SearchView.swift in Sources */,
 				D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */,
 				D08B1B07250A51A700719011 /* UIView+Styles.swift in Sources */,
+				D0229579250AD2E500ACB413 /* ControllerOutput.swift in Sources */,
 				D0AAEFA6250AB5E600FB74EB /* ForecastViewController.swift in Sources */,
 				D08B1B27250A7D6700719011 /* CityListCell.swift in Sources */,
 				D07E55A7250ABE1400971F1E /* ApiRequest.swift in Sources */,
 				D08B1AF825098F4300719011 /* ApplicationAssembly.swift in Sources */,
 				D07E55BB250AC94100971F1E /* ForecastServiceProtocol.swift in Sources */,
 				D08B1AFE250A4AC200719011 /* Operators.swift in Sources */,
+				D07E55BE250ACB4D00971F1E /* ViewControllerFactory.swift in Sources */,
 				D07E55A3250ABD6800971F1E /* NetworkClientError.swift in Sources */,
 				D08B1B01250A4DBF00719011 /* UITableView+Styles.swift in Sources */,
+				D07E55C8250ACCB000971F1E /* NavigationControllerFactoryProtocol.swift in Sources */,
 				D08B1B2C250A9BD400719011 /* City.swift in Sources */,
+				D07E55C6250ACCA600971F1E /* NavigationControllerFactory.swift in Sources */,
 				D08B1B29250A845F00719011 /* UIStackView+Styles.swift in Sources */,
 				D08B1AF425098E2300719011 /* WindowFactoring.swift in Sources */,
 				D08B1B22250A6A8500719011 /* CityListChildrenFactory.swift in Sources */,
@@ -780,6 +835,7 @@
 				D08B1AF525098E2600719011 /* WindowFactory.swift in Sources */,
 				D0AAEFA8250AB5EF00FB74EB /* ForecastView.swift in Sources */,
 				D08B1B19250A5C3200719011 /* Input.swift in Sources */,
+				D022957B250AD36F00ACB413 /* CityListViewControllerOutput.swift in Sources */,
 				D00F15F22509181800F7F33F /* AppDelegate.swift in Sources */,
 				D07E55A5250ABDE700971F1E /* StaticParameter.swift in Sources */,
 				D08B1B14250A5A0000719011 /* UIViewController+Embedding.swift in Sources */,

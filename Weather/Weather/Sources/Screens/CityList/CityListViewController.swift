@@ -3,7 +3,7 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class CityListViewController: UIViewController {
+class CityListViewController: UIViewController, ControllerOutputProducer {
 
     // MARK: - Initialization
 
@@ -29,12 +29,20 @@ class CityListViewController: UIViewController {
         setUpTableSelection()
     }
 
+    // MARK: - ControllerOutputProducer
+
+    var output: Observable<ControllerOutput> {
+        outputRelay.asObservable()
+    }
+
+    let disposeBag = DisposeBag()
+
     // MARK: - Private
 
-    private let disposeBag = DisposeBag()
     private let childrenFactory: CityListChildrenFactoryProtocol
     private let cityListProvider: CityListProviding
     private lazy var searchController = childrenFactory.makeSearchViewController()
+    private let outputRelay = PublishRelay<ControllerOutput>()
 
     private func embedChildren() {
         embed(searchController, inside: cityListView.searchView)
@@ -63,7 +71,8 @@ class CityListViewController: UIViewController {
     private func setUpTableSelection() {
         cityListView.tableView.rx
             .modelSelected(City.self)
-            .subscribe()
+            .map { CityListViewControllerOutput.forecast(city: $0) }
+            .bind(to: outputRelay)
             .disposed(by: disposeBag)
     }
 
