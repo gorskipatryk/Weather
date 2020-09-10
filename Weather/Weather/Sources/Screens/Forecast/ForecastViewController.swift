@@ -47,8 +47,8 @@ class ForecastViewController: UIViewController {
     private func setUpData(forecast: Forecast) {
         forecastView.nameLabel.text = city.name
         forecastView.windLabel.text = "Prędkość wiatru: \(forecast.wind.speed) km/h"
-        forecastView.temperatureLabel.text = "\(Int(forecast.temperature.currentTemperature))"
         let currentTemperature = forecast.temperature.currentTemperature
+        forecastView.temperatureLabel.text = "\(Int(currentTemperature)) °C"
         forecastView.temperatureLabel.textColor = temperatureColorAdapter.getColor(for: currentTemperature)
     }
 
