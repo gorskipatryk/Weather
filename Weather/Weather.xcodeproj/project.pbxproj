@@ -52,6 +52,11 @@
 		D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B1E250A62E300719011 /* ValidationPresenter.swift */; };
 		D08B1B22250A6A8500719011 /* CityListChildrenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B21250A6A8500719011 /* CityListChildrenFactory.swift */; };
 		D08B1B24250A77EA00719011 /* CityListChildrenFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */; };
+		D08B1B27250A7D6700719011 /* CityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B26250A7D6700719011 /* CityListCell.swift */; };
+		D08B1B29250A845F00719011 /* UIStackView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B28250A845F00719011 /* UIStackView+Styles.swift */; };
+		D08B1B2C250A9BD400719011 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B1B2B250A9BD400719011 /* City.swift */; };
+		D0AAEFA1250A9D2B00FB74EB /* city_list.json in Resources */ = {isa = PBXBuildFile; fileRef = D0AAEFA0250A9D2B00FB74EB /* city_list.json */; };
+		D0AAEFA3250AA4BF00FB74EB /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AAEFA2250AA4BF00FB74EB /* FileManaging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +137,11 @@
 		D08B1B1E250A62E300719011 /* ValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPresenter.swift; sourceTree = "<group>"; };
 		D08B1B21250A6A8500719011 /* CityListChildrenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListChildrenFactory.swift; sourceTree = "<group>"; };
 		D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListChildrenFactoryProtocol.swift; sourceTree = "<group>"; };
+		D08B1B26250A7D6700719011 /* CityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListCell.swift; sourceTree = "<group>"; };
+		D08B1B28250A845F00719011 /* UIStackView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Styles.swift"; sourceTree = "<group>"; };
+		D08B1B2B250A9BD400719011 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		D0AAEFA0250A9D2B00FB74EB /* city_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city_list.json; sourceTree = "<group>"; };
+		D0AAEFA2250AA4BF00FB74EB /* FileManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,7 @@
 		D00F161325091CA800F7F33F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D08B1B2A250A9BCB00719011 /* Models */,
 				D08B1B1D250A62D600719011 /* Presenters */,
 				D08B1B1A250A5CCD00719011 /* Validators */,
 				D08B1B15250A5C0900719011 /* Protocols */,
@@ -216,6 +227,7 @@
 		D00F161425091CB500F7F33F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0AAEFA0250A9D2B00FB74EB /* city_list.json */,
 				D00F15FA2509181A00F7F33F /* Assets.xcassets */,
 				D00F15FC2509181A00F7F33F /* LaunchScreen.storyboard */,
 				D00F15FF2509181A00F7F33F /* Info.plist */,
@@ -366,6 +378,7 @@
 				D08B1B00250A4DBF00719011 /* UITableView+Styles.swift */,
 				D08B1B06250A51A700719011 /* UIView+Styles.swift */,
 				D08B1B08250A537100719011 /* UILabel+Styles.swift */,
+				D08B1B28250A845F00719011 /* UIStackView+Styles.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -373,6 +386,7 @@
 		D08B1B02250A4F8400719011 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D08B1B25250A7D5100719011 /* Cells */,
 				D08B1B03250A4F8900719011 /* Search */,
 			);
 			path = Components;
@@ -417,6 +431,7 @@
 			children = (
 				D08B1B16250A5C1200719011 /* InputView.swift */,
 				D08B1B18250A5C3200719011 /* Input.swift */,
+				D0AAEFA2250AA4BF00FB74EB /* FileManaging.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -444,6 +459,22 @@
 				D08B1B23250A77EA00719011 /* CityListChildrenFactoryProtocol.swift */,
 			);
 			path = CityListChildren;
+			sourceTree = "<group>";
+		};
+		D08B1B25250A7D5100719011 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B26250A7D6700719011 /* CityListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D08B1B2A250A9BCB00719011 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D08B1B2B250A9BD400719011 /* City.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00F15FE2509181A00F7F33F /* LaunchScreen.storyboard in Resources */,
+				D0AAEFA1250A9D2B00FB74EB /* city_list.json in Resources */,
 				D00F15FB2509181A00F7F33F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,14 +645,18 @@
 				D08B1B0F250A57C100719011 /* CityListProvider.swift in Sources */,
 				D08B1B11250A592500719011 /* SearchViewController.swift in Sources */,
 				D08B1B1C250A5CEB00719011 /* CityNameValidator.swift in Sources */,
+				D0AAEFA3250AA4BF00FB74EB /* FileManaging.swift in Sources */,
 				D00F15F62509181800F7F33F /* CityListViewController.swift in Sources */,
 				D08B1B17250A5C1200719011 /* InputView.swift in Sources */,
 				D08B1B05250A4F9200719011 /* SearchView.swift in Sources */,
 				D08B1B1F250A62E300719011 /* ValidationPresenter.swift in Sources */,
 				D08B1B07250A51A700719011 /* UIView+Styles.swift in Sources */,
+				D08B1B27250A7D6700719011 /* CityListCell.swift in Sources */,
 				D08B1AF825098F4300719011 /* ApplicationAssembly.swift in Sources */,
 				D08B1AFE250A4AC200719011 /* Operators.swift in Sources */,
 				D08B1B01250A4DBF00719011 /* UITableView+Styles.swift in Sources */,
+				D08B1B2C250A9BD400719011 /* City.swift in Sources */,
+				D08B1B29250A845F00719011 /* UIStackView+Styles.swift in Sources */,
 				D08B1AF425098E2300719011 /* WindowFactoring.swift in Sources */,
 				D08B1B22250A6A8500719011 /* CityListChildrenFactory.swift in Sources */,
 				D08B1B24250A77EA00719011 /* CityListChildrenFactoryProtocol.swift in Sources */,

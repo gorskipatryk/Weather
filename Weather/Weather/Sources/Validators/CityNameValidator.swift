@@ -6,7 +6,7 @@ public enum CityNameValidator {
     // MARK: - Validation
 
     public static func validate(name: String?) -> Validated<String, String> {
-        guard let name = name, !name.isEmpty else {
+        guard let name = name else {
             return .error("Wprowadź nazwę miasta")
         }
 
@@ -17,5 +17,5 @@ public enum CityNameValidator {
         return .valid(name)
     }
 
-    private static let nameRegex = "^[a-zA-Z\\s]*$"
+    private static let nameRegex = "^[a-zA-ZÀ-ž\\s]*$"
 }

@@ -15,7 +15,7 @@ class SearchViewController: UIViewController {
     private(set) lazy var searchView = SearchView()
 
     var cityName: Observable<String> {
-        cityNameRelay.asObservable()
+        cityNameRelay.asObservable().map { $0.lowercased() }
     }
 
     // MARK: - Lifecycle
@@ -39,7 +39,7 @@ class SearchViewController: UIViewController {
 
     private var validatedName: Observable<Validated<String, String>> {
         searchView.searchInput.rx.text
-            .debounce(.seconds(1), scheduler: debouncingScheduler)
+            .debounce(.milliseconds(500), scheduler: debouncingScheduler)
             .map { CityNameValidator.validate(name: $0) }
             .share()
     }

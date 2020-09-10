@@ -6,7 +6,7 @@ extension UITableView {
         return { tableView in
             tableView.backgroundColor = UIColor.white
             tableView.tableFooterView = UIView()
-            // TODO: cell register
+            tableView.register(CityListCell.self, forCellReuseIdentifier: "CityListCell")
         }
     }
 }

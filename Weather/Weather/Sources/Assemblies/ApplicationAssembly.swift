@@ -7,6 +7,7 @@ class ApplicationAssembly: Assembly {
     func assemble(container: Container) {
         assembleFactories(container: container)
         assembleControllers(container: container)
+        assembleProviders(container: container)
     }
 
     func assembleFactories(container: Container) {
@@ -19,5 +20,11 @@ class ApplicationAssembly: Assembly {
             SearchViewController(debouncingScheduler: MainScheduler.instance)
         }
         container.autoregister(CityListViewController.self, initializer: CityListViewController.init)
+    }
+
+    func assembleProviders(container: Container) {
+        container.register(CityListProviding.self) { _ in
+            CityListProvider(fileManager: FileManager.default, jsonDecoder: JSONDecoder())
+        }
     }
 }

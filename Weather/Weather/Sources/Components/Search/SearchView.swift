@@ -15,7 +15,7 @@ class SearchView: UIView, InputView {
     // MARK: - Subviews
 
     let searchInput = UISearchBar()
-    let errorLabel = UILabel() |> UILabel.errorLabel
+    let errorLabel = UILabel() |> UILabel.error
 
     // MARK: - Layout
 
@@ -26,8 +26,9 @@ class SearchView: UIView, InputView {
         searchInput.topAnchor == topAnchor
         searchInput.horizontalAnchors == horizontalAnchors
 
-        errorLabel.topAnchor == searchInput.bottomAnchor + 8
-        errorLabel.horizontalAnchors == horizontalAnchors + 10
+        errorLabel.topAnchor == searchInput.bottomAnchor
+        errorLabel.horizontalAnchors >= horizontalAnchors
+        errorLabel.centerXAnchor == centerXAnchor
         errorLabel.bottomAnchor == bottomAnchor
     }
 
